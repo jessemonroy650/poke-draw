@@ -21,6 +21,7 @@
 
         <!-- App requested permission -->
         <preference name="permissions" value="none"/>
+        <preference name="orientation" value="portrait" />
 
         <!-- PLUGINS * PLUGINS * PLUGINS -->
         <!-- spec="" follows the syntax of https://docs.npmjs.com/cli/install -->
