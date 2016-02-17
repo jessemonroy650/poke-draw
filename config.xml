@@ -17,7 +17,7 @@
         <!-- Target Platforms -->
         <!-- Remove to test which platforms build by default. -->
         <platform name="android" />
-        <platform name="ios" />
+        <!-- <platform name="ios" /> -->
 
         <!-- App requested permission -->
         <preference name="permissions" value="none"/>
