@@ -1,0 +1,14 @@
+body {margin:0;padding:3px;font-size:large;box-sizing:border-box;}
+img:hover {cursor:pointer;}
+a {text-decoration:none;}
+ul {padding:0;list-style-type:none;}
+li {padding:0.5em 0 0 0;}
+.hidden {visibility:collapse;display:none;}
+.expose {visibility:visible;display:block;} /* Here for completeness only. */
+.copyright {padding:5px;align:left;font-style:italic;font-size:small;}
+.marginSpacer {margin:0.5em;}
+#header {margin:0;padding:0;}
+#iconApp {margin:0;float:left;}
+#exitApp {margin:0;float:right;}
+
+
