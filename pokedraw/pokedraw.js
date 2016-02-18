@@ -1,18 +1,21 @@
 /* 
 
     pokedraw.js
+    CONSTANTS and GLOBALS
 
 */
 
-const pokedraw_dim    = {'canvas_width':260,'canvas_height':350};
-const pokedraw_color  = {'value':'#f4f4f4'};
-const pointsToOjectDraw = {'1':'dot','2':'line','3':'triangle','4':'box'}
+const cPokedrawDim    = {'canvas_width':260,'canvas_height':350};
+const cPokedrawColor  = {'value':'#f4f4f4'};
+const cPointsToOjectDraw = {'1':'dot','2':'line','3':'triangle','4':'box'}
+const cWidthToOjectDraw  = {'1':'thin','2':'normal','4':'thick','8':'thicker'}
 
-var radioV            = {'value':'point', 'color':'lightgreen'};
-var current_numPoints = {'value':'1'};
+var numPointsButton   = {'id': 'dot', 'color': 'button-action'};
+var current_numPoints = {'value': 1};
 
-var radioW            = {'value':'pixel_two','color':'lightblue'};
+var lineWidthButton   = {'id': 'px2', 'color': 'button-primary'};
 var current_width     = {'value':2};
+
 var current_color     = {'value':'black'};
 
 // The next two (2) unused.

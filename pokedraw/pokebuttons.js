@@ -2,8 +2,10 @@
 
     pokebuttons.js
 
+0.9.3,2016-02-18 - update "line width" with words instead of number
+    now pokedraw.updateDebug()
 0.9.2,2016-02-16 - convert button clicks to zepto, moved aux screens into main view
-0.8.2,2013-09-08 - Added updateDebug functionallity
+0.8.2,2013-09-08 - Added updateDebug() functionallity
 0.8.0,2013-09-07 - Need 'Undo' button to do something, palette not working either
 0.6.0,2013-09-05 - Got two (2) new screens (about,point) working & installed.
     Need connect data.
@@ -21,7 +23,7 @@
 //    alert("pokedraw_canvas");
 //}
 
-const poketools_version = "0.9.2";
+const pokebuttons_version = "0.9.2";
 
 $('#palette').on('click', function() {
     //alert("palette"); 
@@ -41,7 +43,8 @@ $('#button_linewidth').on('click', function() {
         wrap.style.display = 'block';
         pal.style.display = 'block';
     }
-    updateDebug('db2', current_width.value);
+    var widthToDraw = cWidthToOjectDraw[current_width.value];
+    pokedraw.updateDebug('db2', widthToDraw);
 });
 
 $('#button_undo').on('click', function() {
@@ -63,10 +66,8 @@ $('#button_pointnumber').on('click', function() {
         wrap.style.display = 'block';
         pal.style.display = 'block';
     }
-    objectToDraw = pointsToOjectDraw[current_numPoints.value];
-    //somethingSomething = current_numPoints.value + "," + objectToDraw;
-    updateDebug('db3', objectToDraw);
-
+    var objectToDraw = cPointsToOjectDraw[current_numPoints.value];
+    pokedraw.updateDebug('db3', objectToDraw);
 });
 
 $('#app_icon').on('click', function() {

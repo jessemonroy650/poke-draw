@@ -1,4 +1,4 @@
-body {margin:0;padding:3px;font-size:large;box-sizing:border-box;}
+body {margin:0;padding:3px;font-size:medium;box-sizing:border-box;}
 img:hover {cursor:pointer;}
 a {text-decoration:none;}
 ul {padding:0;list-style-type:none;}
@@ -7,8 +7,11 @@ li {padding:0.5em 0 0 0;}
 .expose {visibility:visible;display:block;} /* Here for completeness only. */
 .copyright {padding:5px;align:left;font-style:italic;font-size:small;}
 .marginSpacer {margin:0.5em;}
-#header {margin:0;padding:0;}
-#iconApp {margin:0;float:left;}
+#iconApp {margin:0;float:right;}
 #exitApp {margin:0;float:right;}
+#copyright {position:fixed;bottom:10px;left:10px;}
+#wrapper_button {position:fixed;bottom:20px;left:10px;}
+
+.pdcfg_button {margin:0.1em 0;width:100%;}
 
 

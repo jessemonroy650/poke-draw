@@ -10,12 +10,6 @@
 </head>
 <body>
 
-<div id=header class="button button-block button-large hidden">
-    <img id=iconApp src=images/PokDrawIcon.png>
-    Poke Draw
-    
-</div>
-
 <!--
 TOP TOP TOP TOP
 TOP TOP TOP TOP
@@ -23,104 +17,78 @@ TOP TOP TOP TOP
 -->
 
 <div id=wrapper class=wrapper>
-<ul id=palette>
-<li id=palette><div onclick=myColorIs(this.id) id=white> </div>
-<li id=palette><div onclick=myColorIs(this.id) id=black> </div>
-<li id=palette><div onclick=myColorIs(this.id) id=darkgray> </div>
-<li id=palette><div onclick=myColorIs(this.id) id=lightgray> </div>
-<li id=palette><div onclick=myColorIs(this.id) id=red> </div>
-<li id=palette><div onclick=myColorIs(this.id) id=green> </div>
-<li id=palette><div onclick=myColorIs(this.id) id=blue> </div>
-<li id=palette><div onclick=myColorIs(this.id) id=yellow> </div>
-</ul>
+    <ul id=palette>
+        <li><div class="mypalette" id=white> </div>
+        <li><div class="mypalette" id=black> </div>
+        <li><div class="mypalette" id=darkgray> </div>
+        <li><div class="mypalette" id=lightgray> </div>
+        <li><div class="mypalette" id=red> </div>
+        <li><div class="mypalette" id=green> </div>
+        <li><div class="mypalette" id=blue> </div>
+        <li><div class="mypalette" id=yellow> </div>
+    </ul>
     <span id=wrapper_canvas style="margin:0px;">
-    <canvas id=pokedraw_canvas width="260" height="350" style="border:1px solid black;">
-    Your browser does not support the HTML5 canvas tag.
-    </canvas>
+        <canvas id=pokedraw_canvas width="260" height="350">
+        Your browser does not support the HTML5 canvas tag.
+        </canvas>
     </span>
 
     <!-- DEBUG -->
     <div class=debugspacer>
-    <span class=dbug id=db3></span>
     <span class=dbug id=db2></span>
+    <span class=dbug id=db3></span>
     <span class=dbug id=db1></span>
     <span class=dbug id=db0 style=float:right;></span>
     </div>
+
     <!-- ABOUT -->
     <div id=about width=300px style=display:none;>
-        <br style=clear:both;>
-        <div class=colorspacer>&nbsp;</div>
-        <br style=clear:both;>
+        <div class=colorspacer></div>
         <div style=padding:0.2em;>
-            <div id=h3><center>About <span id=AppName>Poke Draw</span></center></div>
-            <br style=clear:both;>
+            <div class=h3>About <span id=AppName>Poke Draw</span></div>
+            <p />
             <div>
-            This program is a proof of concept for a simple drawing program created<br>by<br>Jesus Monroy, Jr.
+            This program is a proof of concept for a simple drawing program created<br>by <i>Jesus Monroy, Jr.</i>
             </div>
             <button id=exitApp class="button button-pill button-primary button-large">Exit</button>
-            <br style=clear:both;>
+            <p />
             <div id=version></div>
             <div id=screenSpecs></div>
-            <br style=clear:both;>
-            <div id=LibVersion></div>
+            <p />
+            <div class=space>pokedraw version <span id=LibVersion></span></div>
+            <div class=space>pokebuttons version <span id=buttonVersion></span></div>
             <div class=spacer>navigator.appVersion: <span id=isbrowser>false</span></div>
             <div>isstate: <span id=isstate>none yet</span></div>
         </div>
     </div>
-
     <!-- POINT CONFIG -->
     <div id=pointConfig width=300px style=display:none;>
-        <br style=clear:both;>
-        <div class=colorspacer>&nbsp;</div>
+        <div class=colorspacer></div>
         <div style=padding:0.2em;>
             <div id=h3><center>Number of Point</center></div>
-            <br style=clear:both;>
             <div id=content>
             Please select the number of points of the item to draw.
-            <form action=>
-            <ul>
-            <li> <span class='boxy'><input type="radio" onclick=setMe(this,'lightgreen',radioV,current_numPoints) name="points" id="point" value="1"> 1 = dot</span>
-            <li> <span class='boxy'><input type="radio" onclick=setMe(this,'lightgreen',radioV,current_numPoints) name="points" id="line" value="2"> 2 = line</span>
-            <li> <span class='boxy'><input type="radio" onclick=setMe(this,'lightgreen',radioV,current_numPoints) name="points" id="triangle" value="3"> 3 = triangle</span>
-            <li> <span class='boxy'><input type="radio" onclick=setMe(this,'lightgreen',radioV,current_numPoints) name="points" id="box" value="4"> 4 = box, or similar</span>
-            </ul>
-            </form>
-            <br style=clear:both;>
+            <button id=dot      value=1 class="pbutton button button-large pdcfg_button button-action">1 = dot</button>
+            <button id=line     value=2 class="pbutton button button-large pdcfg_button">2 = line</button>
+            <button id=triangle value=3 class="pbutton button button-large pdcfg_button">3 = triangle</button>
+            <button id=box      value=4 class="pbutton button button-large pdcfg_button">4 = box, or similar</button>
             </div>
         </div>
     </div>
-
-    <!-- BUTTONS -->
-    <span id=wrapper_button style="">
-    <img id=button_linewidth class="button_normal" align=left src=images/button_linewidth_32x32.png>
-    <!-- <img id=button_undo class="button_normal" align=left src=images/button_undo_32x32.png> -->
-    <img id=button_pointnumber class="button_normal" align=left src=images/button_sidenumber_32x32.png>
-    </span>
-
-    <img id=app_icon class="button_normal" align=right src=images/PokDrawIcon.png>
-
-
     <!-- SIZE CONFIG -->
     <div id=sizeConfig width=300px style=display:none;>
-        <br style=clear:both;>
-        <div class=colorspacer>&nbsp;</div>
-        <br style=clear:both;>
+        <div class=colorspacer></div>
         <div style=padding:0.2em;>
-            <div id=h3><center>Size of Point</center></div>
-            <br style=clear:both;>
+            <div class=h3>Size of Point</div>
             <div id=content>
-            Please select the width of drawing item (line, stroke, etc). 
-            <form action=>
-            <ul>
-            <li> <span class='boxy'><input type="radio" onclick=setMe(this,'lightblue',radioW,current_width) name="size" id="pixel_one" value="1"> 1 = thin</span>
-            <li> <span class='boxy'><input type="radio" onclick=setMe(this,'lightblue',radioW,current_width) name="size" id="pixel_two" value="2"> 2 = normal</span>
-            <li> <span class='boxy'><input type="radio" onclick=setMe(this,'lightblue',radioW,current_width) name="size" id="pixel_four" value="4"> 4 = thick</span>
-            <li> <span class='boxy'><input type="radio" onclick=setMe(this,'lightblue',radioW,current_width) name="size" id="pixel_eight" value="8"> 8 = thicker</span>
-            </ul>
-            </form>
-            <br style=clear:both;>
+            Please select the width of drawing item (line, stroke, etc).
+            <button id=px1 value=1 class="wbutton button button-large pdcfg_button">1px = thin</button>
+            <button id=px2 value=2 class="wbutton button button-large pdcfg_button button-primary">2px = normal</button>
+            <button id=px4 value=4 class="wbutton button button-large pdcfg_button">4px = thick</button>
+            <button id=px8 value=8 class="wbutton button button-large pdcfg_button">8px = thicker</button>
         </div>
     </div>
+
 </div>
 
 <!--
@@ -128,7 +96,15 @@ BOTTOM BOTTOM
 BOTTOM BOTTOM
 BOTTOM BOTTOM
 -->
-<p style=clear:both; />
+
+<!-- BUTTONS -->
+<div id=wrapper_button>
+        <img id=button_linewidth class="button_normal" align=left src=images/button_linewidth_32x32.png>
+        <!-- <img id=button_undo class="button_normal" align=left src=images/button_undo_32x32.png> -->
+        <img id=button_pointnumber class="button_normal" align=left src=images/button_sidenumber_32x32.png>
+        <img id=app_icon class="button_normal" align=right src=images/PokDrawIcon.png>
+</div>
+<!-- COPYRIGHT -->
 <div id="copyright" class="copyright" >
     <span id=copyright>Created by Jesus Monroy, Jr. &copy; 2016</span>
 </div>
@@ -142,12 +118,12 @@ BOTTOM BOTTOM
 <!-- Handle Canvas Pokes -->
 <script type="text/javascript" src="pokedraw/drawtools.js"></script>
 <!-- Handle Button Pokes -->
-<!-- <script type="text/javascript" src="pokedraw/poketools.js"></script> -->
 <script type="text/javascript" src="pokedraw/pokebuttons.js"></script>
 
 <script type="text/javascript" charset="utf-8" src="basicWebGUIFunctions.js"></script>
 
 <script type="text/javascript" charset="utf-8" src="old.js"></script>
+<script type="text/javascript" charset="utf-8" src="new.js"></script>
 
 <script type="text/javascript" charset="utf-8" src="app.js"></script>
 <script type="text/javascript"></script>
