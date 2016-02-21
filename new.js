@@ -24,6 +24,9 @@ $('.pbutton').click(function(e) {
     $('#' + e.target.id).addClass(numPointsButton.color);
     // save the current active button
     numPointsButton.id = e.target.id;
+
+    // RRR
+    $('#button_pointnumber').click();
 });
 
 // Width buttons
@@ -39,6 +42,9 @@ $('.wbutton').click(function(e) {
     $('#' + e.target.id).addClass(lineWidthButton.color);
     // save the current active button
     lineWidthButton.id = e.target.id;
+
+    // RRR 
+    $('#button_linewidth').click();
 });
 
 

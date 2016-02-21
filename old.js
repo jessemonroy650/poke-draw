@@ -17,7 +17,7 @@ var pokedraw = {
     }
 };
 
-const pokedraw_version = "0.9.5";
+const pokedraw_version = "0.9.6";
 
 //
 //    Setup the Canvas

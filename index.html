@@ -27,7 +27,7 @@ TOP TOP TOP TOP
         <li><div class="mypalette" id=blue> </div>
         <li><div class="mypalette" id=yellow> </div>
     </ul>
-    <span id=wrapper_canvas style="margin:0px;">
+    <span id=wrapper_canvas>
         <canvas id=pokedraw_canvas width="260" height="350">
         Your browser does not support the HTML5 canvas tag.
         </canvas>
@@ -38,13 +38,13 @@ TOP TOP TOP TOP
     <span class=dbug id=db2></span>
     <span class=dbug id=db3></span>
     <span class=dbug id=db1></span>
-    <span class=dbug id=db0 style=float:right;></span>
+    <span class=dbug id=db0 class=floatr></span>
     </div>
 
     <!-- ABOUT -->
     <div id=about width=300px style=display:none;>
         <div class=colorspacer></div>
-        <div style=padding:0.2em;>
+        <div class=auxbox>
             <div class=h3>About <span id=AppName>Poke Draw</span></div>
             <p />
             <div>
@@ -64,7 +64,7 @@ TOP TOP TOP TOP
     <!-- POINT CONFIG -->
     <div id=pointConfig width=300px style=display:none;>
         <div class=colorspacer></div>
-        <div style=padding:0.2em;>
+        <div class=auxbox>
             <div id=h3><center>Number of Point</center></div>
             <div id=content>
             Please select the number of points of the item to draw.
@@ -78,7 +78,7 @@ TOP TOP TOP TOP
     <!-- SIZE CONFIG -->
     <div id=sizeConfig width=300px style=display:none;>
         <div class=colorspacer></div>
-        <div style=padding:0.2em;>
+        <div class=auxbox>
             <div class=h3>Size of Point</div>
             <div id=content>
             Please select the width of drawing item (line, stroke, etc).
@@ -99,10 +99,11 @@ BOTTOM BOTTOM
 
 <!-- BUTTONS -->
 <div id=wrapper_button>
-        <img id=button_linewidth class="button_normal" align=left src=images/button_linewidth_32x32.png>
-        <!-- <img id=button_undo class="button_normal" align=left src=images/button_undo_32x32.png> -->
+        <!-- <img id=button_undo        class="button_normal" align=left src=images/button_undo_32x32.png> -->
+        <img id=button_linewidth   class="button_normal" align=left src=images/button_linewidth_32x32.png>
         <img id=button_pointnumber class="button_normal" align=left src=images/button_sidenumber_32x32.png>
-        <img id=app_icon class="button_normal" align=right src=images/PokDrawIcon.png>
+        <!-- <img id=button_save        class="button_normal" align=left src=images/button_savemirror_32x32.png> -->
+        <img id=app_icon           class="button_normal" align=right src=images/PokDrawIcon.png>
 </div>
 <!-- COPYRIGHT -->
 <div id="copyright" class="copyright" >

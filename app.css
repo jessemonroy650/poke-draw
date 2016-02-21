@@ -11,6 +11,11 @@ li {padding:0.5em 0 0 0;}
 #exitApp {margin:0;float:right;}
 #copyright {position:fixed;bottom:10px;left:10px;}
 #wrapper_button {position:fixed;bottom:20px;left:10px;}
+#wrapper_canvas {margin:0px;}
+
+.floatr {float:right;}
+.floatl {float:left;}
+.auxbox {padding:0.2em;}
 
 .pdcfg_button {margin:0.1em 0;width:100%;}
 
